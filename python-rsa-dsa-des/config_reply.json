@@ -1,0 +1,6 @@
+{
+    "type":"CMD_CONFIG_REPLY",
+    "mid":1005,
+    "code":1923,
+    "msg":"this is a config reply message description"
+}

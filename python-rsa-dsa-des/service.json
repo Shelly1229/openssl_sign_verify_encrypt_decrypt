@@ -1,0 +1,11 @@
+{
+    "type":"CMD_SERVICE",
+    "mid":1002,
+    "timestamp":19489120.394850,
+    "param":[
+        {"param1":"param1"},
+        {"param2":"param2"}
+    ],
+    "code":1003,
+    "msg":"this is a response message description"
+}

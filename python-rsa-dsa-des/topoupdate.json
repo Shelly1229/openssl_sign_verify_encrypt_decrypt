@@ -1,0 +1,7 @@
+
+{
+    "type":"CMD_TOPO_UPDATE",
+    "mid":7,
+    "param":[1,2],
+    "timestamp":123234879347.239482
+}
