@@ -1,8 +1,0 @@
-{
-    "type":"DATABASE_DATA_REQUEST",
-    "mid":1948,
-    "param":[
-        {"deviceId":"29103750"},
-        {"dataKey":"datakey"}
-    ]
-}
