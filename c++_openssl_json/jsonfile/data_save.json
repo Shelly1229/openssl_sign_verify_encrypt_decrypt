@@ -1,0 +1,13 @@
+{
+    "type":"DATABASE_DATA_SAVE",
+    "mid":29380,
+    "param":[
+        {"deviceId":"10293"},
+        {"dataKey":"datakey"},
+        {"data":{
+            "data1":"data1",
+            "data2":"data2"
+        }}
+    ],
+    "timestamp":9238751.19038
+}

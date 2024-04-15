@@ -1,0 +1,8 @@
+{
+    "type":"DATABASE_DATA_DEL",
+    "mid":19048,
+    "param":[
+        {"deviceId":"19048"},
+        {"dataKey":"datakey"}
+    ]
+}
