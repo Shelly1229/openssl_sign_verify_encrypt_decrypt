@@ -1,14 +1,17 @@
 # openssl_sign_verify_encrypt_decrypt
-This is a program that implements authentication and key management. It includes RSA algorithm, a hybrid algorithm that combines ECDSA and AES. 
+This is a program that implements authentication and key management. It includes RSA algorithm(C++/Python), a hybrid algorithm that combines ECDSA and AES(C++) and a hybrid algorithm that combines DES and DSA(Python). 
 
-c++_openssl includes two algorithms to authenticate, encrypt and decrypt string information, and calculate runtime.
+c++_openssl includes two algorithms(RSA and ECDSA_AES) to authenticate, encrypt and decrypt string information, and calculate runtime.
 
-c++_openssl_json includes two algorithms to authenticate, encrypt and decrypt json information, and calculate runtime.
+c++_openssl_json includes two algorithms(RSA and ECDSA_AES) to authenticate, encrypt and decrypt json information, and calculate runtime.
+
+python_rsa_dsa_des includes two algorithms(RSA and DSA_DES) to authenticate, encrypt and decrypt json information, and calculate runtime.
 
 running environment:Linux
 
-language:C++
+language:C++,Python
 
+# Running C++ program
 ## install C++ dependencies
 sudo apt-get install make
 
@@ -60,5 +63,8 @@ make
 
 ./new
 
+# Running Python program
+python rsa.py
+python dsa+des.py
 
 
