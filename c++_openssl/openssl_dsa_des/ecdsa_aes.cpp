@@ -170,31 +170,31 @@ int decrypt(unsigned char *ciphertext, int ciphertext_len, unsigned char *key,
 int main() {
 	double timestamp=clock();
 	
-	//´«½øÀ´Êı¾İĞèÒª×ª»»Îª×Ö·û´®ÀàĞÍ
+	//ä¼ è¿›æ¥æ•°æ®éœ€è¦è½¬æ¢ä¸ºå­—ç¬¦ä¸²ç±»å‹
 	 
 	std::string messnew="this is a test param message."; 
 	std::cout<<"param: \n"<<messnew<<std::endl;
 	
 	
-    // ´´½¨ EC_KEY ¶ÔÏó²¢ÉèÖÃÍÖÔ²ÇúÏß²ÎÊı
+    // åˆ›å»º EC_KEY å¯¹è±¡å¹¶è®¾ç½®æ¤­åœ†æ›²çº¿å‚æ•°
     EC_KEY *ec_key = EC_KEY_new_by_curve_name(NID_secp256k1);
     
-    // Éú³É EC_KEY µÄ¹«Ë½Ô¿¶Ô
+    // ç”Ÿæˆ EC_KEY çš„å…¬ç§é’¥å¯¹
     EC_KEY_generate_key(ec_key);
     
     
-    // ÉèÖÃÇ©ÃûµÄÏûÏ¢ÄÚÈİ
+    // è®¾ç½®ç­¾åçš„æ¶ˆæ¯å†…å®¹
     unsigned char* message = (unsigned char*)messnew.c_str();
     size_t message_len = strlen((char*)message);
     
-    // Ê¹ÓÃË½Ô¿¶ÔÏûÏ¢½øĞĞÇ©Ãû
+    // ä½¿ç”¨ç§é’¥å¯¹æ¶ˆæ¯è¿›è¡Œç­¾å
     ECDSA_SIG* signature = ECDSA_do_sign(message, message_len, ec_key);
     
-    // ½«Ç©ÃûĞòÁĞ»¯Îª DER ±àÂë¸ñÊ½
+    // å°†ç­¾ååºåˆ—åŒ–ä¸º DER ç¼–ç æ ¼å¼
     unsigned char* der_signature = NULL;
     int der_signature_len = i2d_ECDSA_SIG(signature, &der_signature);
     
-    // Ê¹ÓÃ¹«Ô¿ºÍÇ©ÃûÀ´ÑéÖ¤ÏûÏ¢µÄÍêÕûĞÔ
+    // ä½¿ç”¨å…¬é’¥å’Œç­¾åæ¥éªŒè¯æ¶ˆæ¯çš„å®Œæ•´æ€§
     int result = ECDSA_do_verify(message, message_len, signature, ec_key);
     
     if (result == 1) {
@@ -205,7 +205,7 @@ int main() {
         printf("Signature verification error.\n");
     }
     
-    // ÊÍ·ÅÄÚ´æºÍ×ÊÔ´
+    // é‡Šæ”¾å†…å­˜å’Œèµ„æº
     ECDSA_SIG_free(signature);
     EC_KEY_free(ec_key);
     free(der_signature);
@@ -283,7 +283,7 @@ int main() {
 		/* Add a NULL terminator. We are expecting printable text */
 	decryptedtext[decryptedtext_len] = '\0';
 	
-	//decryptedtextÊÇ½âÃÜºóµÄĞÅÏ¢ 
+	//decryptedtextæ˜¯è§£å¯†åçš„ä¿¡æ¯ 
 		/* Show the decrypted text */
 	printf("Decrypted text is:\n");
 	printf("%s\n", decryptedtext);
