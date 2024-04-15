@@ -1,5 +1,5 @@
 # openssl_sign_verify_encrypt_decrypt
-This is a program that implements authentication and key management. It includes RSA algorithm, a hybrid algorithm that combines DSA and DES. 
+This is a program that implements authentication and key management. It includes RSA algorithm, a hybrid algorithm that combines ECDSA and AES. 
 
 c++_openssl includes two algorithms to authenticate, encrypt and decrypt string information, and calculate runtime.
 
@@ -54,11 +54,11 @@ make
 ./rsa
 
 
-cd openssl_dsa_des
+cd openssl_ecdsa_aes
 
 make
 
-./dsa_des
+./new
 
 
 
